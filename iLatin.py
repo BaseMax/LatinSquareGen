@@ -1,3 +1,5 @@
+import time
+
 def row(n, r, c = []):
 	row_list = []
 	len_c = len(c)
@@ -57,11 +59,26 @@ def list_latin(n, c = []):
 
 # order = 1
 # order = 2
-order = 3 # 12
+# order = 3 # 12
 # order = 4 # 576
 # order = 5 # 161280
 # order = 6
 # order = 7
 
-print(count_latin(order))
-print(list_latin(order))
+# print(count_latin(order))
+# print(list_latin(order))
+
+time_start = time.time_ns()
+
+# print(count_latin(1)) # 0
+# print(count_latin(2)) # 0
+# print(count_latin(3)) # 0
+# print(count_latin(4)) # 0
+# print(count_latin(5)) # 1859719600ns = 1.8597196s
+print(count_latin(6)) # 1859719600
+
+time_end = time.time_ns()
+print(time_start)
+print(time_end)
+print(time_end - time_start)
+
