@@ -84,6 +84,48 @@ time_start = time.time_ns()
 # print(count_latin(5)) # 1859719600ns = 1.8597196s
 # print(count_latin(6)) # 1859719600
 
+
+# 1
+# 1666459033480935400
+# 1666459033480935400
+# 0
+# 2
+# 1666459033480935400
+# 1666459033480935400
+# 0
+# 3
+# 1666459033480935400
+# 1666459033480935400
+# 0
+# 4
+# 1666459033496556900
+# 1666459033496556900
+# 0
+# 5
+# 1666459033496556900
+# 1666459035874167600
+# 2377610700
+# 6
+
+MAX = 7
+for i in range(1, MAX):
+	print(i)
+
+	time_start = time.time_ns()
+	items = list_latin(i)
+	time_end = time.time_ns()
+
+	print(time_start)
+	print(time_end)
+	print(time_end - time_start)
+	
+	# create to file
+	with open("latin_square_"+str(i)+".txt", "w") as f:
+		for item in items:
+			f.write(str(item))
+
+exit(1)
+
 time_start = time.time_ns()
 print(count_latin(5)) # 
 # list_latin(5)
