@@ -82,10 +82,37 @@ time_start = time.time_ns()
 # print(count_latin(3)) # 0
 # print(count_latin(4)) # 0
 # print(count_latin(5)) # 1859719600ns = 1.8597196s
-print(count_latin(6)) # 1859719600
+# print(count_latin(6)) # 1859719600
 
+time_start = time.time_ns()
+print(count_latin(5)) # 
+# list_latin(5)
 time_end = time.time_ns()
 print(time_start)
 print(time_end)
 print(time_end - time_start)
 
+# 161280
+# 1666411835152415700
+# 1666411837042330000
+# 1889914300
+
+time_start = time.time_ns()
+print(count_latin(6)) # 
+time_end = time.time_ns()
+print(time_start)
+print(time_end)
+print(time_end - time_start)
+
+# 812851200
+# 1666411837042330000
+# 1666424406427657700
+# 12569385327700
+
+
+time_start = time.time_ns()
+print(count_latin(7)) # 
+time_end = time.time_ns()
+print(time_start)
+print(time_end)
+print(time_end - time_start)
