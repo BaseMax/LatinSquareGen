@@ -75,7 +75,7 @@ def list_latin(n, c = []):
 # print(count_latin(order))
 # print(list_latin(order))
 
-time_start = time.time_ns()
+# time_start = time.time_ns()
 
 # print(count_latin(1)) # 0
 # print(count_latin(2)) # 0
@@ -107,54 +107,54 @@ time_start = time.time_ns()
 # 2377610700
 # 6
 
-MAX = 7
-for i in range(1, MAX):
-	print(i)
+# MAX = 7
+# for i in range(1, MAX):
+# 	print(i)
 
-	time_start = time.time_ns()
-	items = list_latin(i)
-	time_end = time.time_ns()
+# 	time_start = time.time_ns()
+# 	items = list_latin(i)
+# 	time_end = time.time_ns()
 
-	print(time_start)
-	print(time_end)
-	print(time_end - time_start)
+# 	print(time_start)
+# 	print(time_end)
+# 	print(time_end - time_start)
 	
-	# create to file
-	with open("latin_square_"+str(i)+".txt", "w") as f:
-		for item in items:
-			f.write(str(item))
+# 	# create to file
+# 	with open("latin_square_"+str(i)+".txt", "w") as f:
+# 		for item in items:
+# 			f.write(str(item))
 
-exit(1)
+# exit(1)
 
-time_start = time.time_ns()
-print(count_latin(5)) # 
-# list_latin(5)
-time_end = time.time_ns()
-print(time_start)
-print(time_end)
-print(time_end - time_start)
+# time_start = time.time_ns()
+# print(count_latin(5)) # 
+# # list_latin(5)
+# time_end = time.time_ns()
+# print(time_start)
+# print(time_end)
+# print(time_end - time_start)
 
-# 161280
-# 1666411835152415700
-# 1666411837042330000
-# 1889914300 ns = 1.8899143 s
+# # 161280
+# # 1666411835152415700
+# # 1666411837042330000
+# # 1889914300 ns = 1.8899143 s
 
-time_start = time.time_ns()
-print(count_latin(6)) # 
-time_end = time.time_ns()
-print(time_start)
-print(time_end)
-print(time_end - time_start)
+# time_start = time.time_ns()
+# print(count_latin(6)) # 
+# time_end = time.time_ns()
+# print(time_start)
+# print(time_end)
+# print(time_end - time_start)
 
-# 812851200
-# 1666411837042330000
-# 1666424406427657700
-# 12569385327700 ns = 12569.385327700002 s
+# # 812851200
+# # 1666411837042330000
+# # 1666424406427657700
+# # 12569385327700 ns = 12569.385327700002 s
 
 
-time_start = time.time_ns()
-print(count_latin(7)) # 
-time_end = time.time_ns()
-print(time_start)
-print(time_end)
-print(time_end - time_start)
+# time_start = time.time_ns()
+# print(count_latin(7)) # 
+# time_end = time.time_ns()
+# print(time_start)
+# print(time_end)
+# print(time_end - time_start)
