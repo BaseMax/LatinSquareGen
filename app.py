@@ -1,112 +1,58 @@
+import sys
+import time
+
 from LatinSquareGen import count_latin
 from LatinSquareGen import list_latin
 
-# order = 1
-# order = 2
-# order = 3 # 12
-# order = 4 # 576
-# order = 5 # 161280
-# order = 6
-# order = 7
+def help():
+    print("LatinSquareGen - v1.0.0")
+    print("")
+    print("Commands:")
+    print("-h, --help\t Show help")
+    print("-v, --version\t Show version")
+    print("-c, --create-latin\t Create an ordinary latin square")
+    print("-rl, --create-random-latin\t Create a random latin square")
+    print("-cl, --count-latin\t Count all latin squares in an order")
+    print("")
 
-# print(count_latin(order))
-# print(list_latin(order))
-
-# time_start = time.time_ns()
-
-# print(count_latin(1)) # 0
-# print(count_latin(2)) # 0
-# print(count_latin(3)) # 0
-# print(count_latin(4)) # 0
-# print(count_latin(5)) # 1859719600ns = 1.8597196s
-# print(count_latin(6)) # 1859719600
-
-
-# 1
-# 1666459033480935400
-# 1666459033480935400
-# 0
-# 2
-# 1666459033480935400
-# 1666459033480935400
-# 0
-# 3
-# 1666459033480935400
-# 1666459033480935400
-# 0
-# 4
-# 1666459033496556900
-# 1666459033496556900
-# 0
-# 5
-# 1666459033496556900
-# 1666459035874167600
-# 2377610700
-# 6
-
-# MAX = 7
-# for i in range(1, MAX):
-# 	print(i)
-
-# 	time_start = time.time_ns()
-# 	items = list_latin(i)
-# 	time_end = time.time_ns()
-
-# 	print(time_start)
-# 	print(time_end)
-# 	print(time_end - time_start)
-	
-# 	# create to file
-# 	with open("latin_square_"+str(i)+".txt", "w") as f:
-# 		for item in items:
-# 			f.write(str(item))
-
-# exit(1)
-
-# time_start = time.time_ns()
-# print(count_latin(5)) # 
-# # list_latin(5)
-# time_end = time.time_ns()
-# print(time_start)
-# print(time_end)
-# print(time_end - time_start)
-
-# # 161280
-# # 1666411835152415700
-# # 1666411837042330000
-# # 1889914300 ns = 1.8899143 s
-
-# time_start = time.time_ns()
-# print(count_latin(6)) # 
-# time_end = time.time_ns()
-# print(time_start)
-# print(time_end)
-# print(time_end - time_start)
-
-# # 812851200
-# # 1666411837042330000
-# # 1666424406427657700
-# # 12569385327700 ns = 12569.385327700002 s
-
-
-# time_start = time.time_ns()
-# print(count_latin(7)) # 
-# time_end = time.time_ns()
-# print(time_start)
-# print(time_end)
-# print(time_end - time_start)
-
-# def test(n):
-# 	items = list_latin(n)
-# 	# for item in items:
-# 	# 	print(item)
-# 	print(len(list(items)))
-
-# test(1)
-# test(2)
-# test(3)
-# test(4)
-# test(5)
-
-# handle arguments
-# print arguments
+# handle -h and --help
+# handle -v and --version
+# handle -c and --create-latin <n>
+# handle -rl and --create-random-latin <n>
+# handle -cl and --count-latin <n>
+if len(sys.argv) == 1:
+    help()
+    sys.exit(1)
+elif sys.argv[1] == "-h" or sys.argv[1] == "--help":
+    help()
+elif sys.argv[1] == "-v" or sys.argv[1] == "--version":
+    print("LatinSquareGen - v1.0.0")
+elif sys.argv[1] == "-c" or sys.argv[1] == "--create-latin":
+    if len(sys.argv) == 3:
+        order = int(sys.argv[2])
+        items = list_latin(order)
+        for item in items:
+            print(item)
+    else:
+        print("Invalid arguments")
+        help()
+elif sys.argv[1] == "-rl" or sys.argv[1] == "--create-random-latin":
+    if len(sys.argv) == 3:
+        order = int(sys.argv[2])
+        items = list_latin(order)
+        for item in items:
+            print(item)
+    else:
+        print("Invalid arguments")
+        help()
+elif sys.argv[1] == "-cl" or sys.argv[1] == "--count-latin":
+    if len(sys.argv) == 3:
+        order = int(sys.argv[2])
+        print(count_latin(order))
+    else:
+        print("Invalid arguments")
+        help()
+else:
+    print("Unknown command")
+    help()
+    sys.exit(1)

@@ -5,9 +5,6 @@
 # Date: 2022/10/20
 #
 
-import time
-import os
-
 # Computing the rows
 def row(n, r, c = []):
 	row_list = []
