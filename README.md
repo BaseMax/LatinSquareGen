@@ -1,6 +1,6 @@
-# LatinSquareGen
+# Latin Square Gen (LatinSquareGen)
 
-Easy-to-use software for calculating and counting the number of Latin squares in the user's given order, this program can perform any order without computational limitations.
+Easy-to-use software for calculating(generating) and counting the number of Latin squares in the user's given order, this program can perform any order without computational limitations. (Latin square generator)
 
 # What is Latin square?
 
