@@ -1,3 +1,10 @@
+#
+# Name: Latin Square Gen
+# Author: Max Base
+# Date: 2022/10/20
+# Repository: https://github.com/basemax/LatinSquareGen
+#
+
 import sys
 import time
 

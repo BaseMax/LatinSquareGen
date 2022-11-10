@@ -1,8 +1,8 @@
 #
 # Name: Latin Square Gen
-# Repository: https://github.com/basemax/LatinSquareGen
 # Author: Max Base
 # Date: 2022/10/20
+# Repository: https://github.com/basemax/LatinSquareGen
 #
 
 # Computing the rows
